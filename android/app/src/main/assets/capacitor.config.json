@@ -1,0 +1,6 @@
+{
+	"appId": "com.tindefc.app",
+	"appName": "Tindefc",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}
