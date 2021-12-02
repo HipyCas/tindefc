@@ -1,11 +1,6 @@
 import Home from "./views/Home.vue";
 import People from "./views/People.vue";
 import Me from "./views/Me.vue";
-import NotFound from "./views/NotFound.vue";
-
-import Auth from "./views/Auth.vue";
-import Profile from "./views/Profile.vue";
-import { store } from "./store";
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export const routes = [
@@ -24,10 +19,6 @@ export const routes = [
     path: "/me",
     meta: { title: "Me" },
     component: Me,
-  },
-  {
-    path: "/profile",
-    component: Profile,
   },
   {
     path: "/:path(.*)",
