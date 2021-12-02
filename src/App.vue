@@ -1,20 +1,31 @@
 <script setup>
+import Login from "./components/Login.vue";
+
 import { ChatAlt2Icon, HeartIcon, UserIcon } from "@heroicons/vue/outline";
 
 import tindefc from "/img/Tindefc1.png";
 
 import { ref } from "vue";
 
+import { store } from "./store";
+import { supabase } from "./supabase";
+
 let counter = ref(0);
 
 setInterval(() => {
   counter.value++;
 }, 1000);
+
+store.user = supabase.auth.user();
+supabase.auth.onAuthStateChange((_, session) => {
+  store.user = session.user;
+});
 </script>
 
 <template>
   <div>
     <header
+      v-if="store.user"
       class="
         shadow-xl
         w-screen
@@ -30,9 +41,11 @@ setInterval(() => {
       <img :src="tindefc" alt="Logo" class="h-[60px]" />
     </header>
     <main>
-      <router-view />
+      <router-view v-if="store.user" />
+      <Login v-else></Login>
     </main>
     <footer
+      v-if="store.user"
       class="
         fixed
         bottom-0
