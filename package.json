@@ -7,10 +7,14 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "@capacitor/android": "^3.3.2",
+    "@capacitor/core": "^3.3.2",
+    "@supabase/supabase-js": "^1.28.4",
     "vue": "^3.2.23",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
+    "@capacitor/cli": "^3.3.2",
     "@headlessui/vue": "^1.4.2",
     "@heroicons/vue": "^1.0.5",
     "@tailwindcss/aspect-ratio": "^0.3.0",
