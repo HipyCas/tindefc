@@ -9,7 +9,7 @@
   "dependencies": {
     "@capacitor/android": "^3.3.2",
     "@capacitor/core": "^3.3.2",
-    "@supabase/supabase-js": "^1.28.4",
+    "@supabase/supabase-js": "^2.6.0",
     "vue": "^3.2.23",
     "vue-router": "^4.0.12"
   },
